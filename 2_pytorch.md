@@ -251,8 +251,8 @@ Ray를 사용한 하이퍼파라미터 튜닝은 네 가지 절차를 통해 수
     다양한 하이퍼파라미터 셋에 대하여 병렬처리 방식으로 학습을 진행하고 결과를 관찰하기 때문에 모든 경우의 수에 대해 끝까지 학습을 진행하면 리소스가 낭비될 수 있습니다.
     
     따라서 학습스케줄링 알고리즘에 따라 중간중간 퍼포먼스가 잘 나오지 않아 가망이 없다고 판단되는 파라미터셋을 제외시키고 계속해서 학습을 진행시키게 됩니다.
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/648c1c6a-9798-459a-afaa-98e085e462fe/Untitled.png)
+
+    ![image](https://user-images.githubusercontent.com/72616557/226943578-2838a141-1284-4ad9-a9c2-bd889d729d86.png)
     
 
 ```python
@@ -309,7 +309,7 @@ Batch Size 줄인다음에 re-launch, re-run
 > nvidia-smi 처럼 Colab 환경에서 GPU의 상태를 보여주는 모듈입니다. iter 마다 메모리가 늘어나는지 실시간으로 확인 가능합니다.
 > 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45c24d50-42e4-4230-9328-96dee066fd37/Untitled.png)
+![image](https://user-images.githubusercontent.com/72616557/226943751-04f356e9-4223-4ae8-8c76-9cf63ad6f4e2.png)
 
 ### **torch.cuda.empty_cache() 써보기**
 
@@ -326,7 +326,7 @@ Batch Size 줄인다음에 re-launch, re-run
 
 **GPUtil 을 사용하여 empty_cache() 함수 동작 시각화해보기**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41ca8ced-d335-4e1e-af25-b5c80697459b/Untitled.png)
+![image](https://user-images.githubusercontent.com/72616557/226944141-1463a0db-26f7-43b2-8969-633819a62306.png)
 
 **보통 학습시작 전 무거운 iteration이 돌기 전에 한번 써주면 좋습니다.**
 
@@ -382,7 +382,7 @@ print(i)   # 4
 
 위 코드처럼 반복문 안의 변수가 밖에서도 참조됩니다. 이는 iteration이 끝나도 메모리에 변수가 남아있다는 뜻입니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd308876-c0ec-4684-821e-8bb305050b87/Untitled.png)
+![image](https://user-images.githubusercontent.com/72616557/226944856-9ff0c3be-92c4-4d45-bc23-881cf2313539.png)
 
 그럼 만약에 반복문 안에 큰 사이즈의 모델이 들어있다면 반복문이 종료되고 더이상 사용하지 않는 변수가 큰 메모리를 쓸데없이 차지하고 있을 것입니다.
 
